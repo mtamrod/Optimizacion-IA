@@ -1,3 +1,6 @@
+El código fuente principal se encuentra en la rama [`master`](https://github.com/USUARIO/NOMBRE_REPO/tree/master).
+
+
 # RedSocialBuenasPrácticas
 
 Aplicación móvil desarrollada con **Ionic y Angular** cuyo objetivo es aplicar buenas prácticas de optimización de código y analizar su impacto mediante **KPIs (Key Performance Indicators)**, siguiendo los contenidos del **Tema 5: Optimización de código con IA y análisis de KPIs**.
