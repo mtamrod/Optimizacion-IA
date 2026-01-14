@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Social B (Buenas prácticas)</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-input
+      placeholder="Buscar en posts..."
+      [value]="queryCtrl.value"
+      (ionInput)="onQueryInput($event)">
+    </ion-input>
+  </ion-item>
+
+  <ion-note *ngIf="error" color="danger">{{ error }}</ion-note>
+
+  <div *ngIf="loading" style="margin-top: 12px;">
+    <ion-spinner></ion-spinner>
+    <ion-note> Cargando...</ion-note>
+  </div>
+
+  <ion-list *ngIf="(filtered$ | async) as list">
+    <ion-item *ngFor="let p of list; trackBy: trackById" (click)="openPost(p)">
+      <ion-label class="ion-text-wrap">
+        <b>{{ p.titlePretty }}</b>
+        <div>{{ p.body }}</div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div style="margin-top: 12px;">
+    <ion-note>Render items: <b>{{ kpi.kpis.renderItems }}</b></ion-note><br />
+    <ion-note>Subs activas (aprox): <b>{{ kpi.kpis.activeSubscriptions }}</b></ion-note>
+  </div>
+
+  <div style="display:flex; gap: 10px; margin-top: 16px;">
+    <ion-button expand="block" fill="outline" (click)="goSettings()">Métricas</ion-button>
+  </div>
+
+</ion-content>
