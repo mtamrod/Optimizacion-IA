@@ -1,4 +1,4 @@
-El código fuente principal se encuentra en la rama [`master`](https://github.com/USUARIO/NOMBRE_REPO/tree/master).
+El código fuente principal se encuentra en la rama [`master`](https://github.com/mtamrod/Optimizacion-IA/tree/master).
 
 
 # RedSocialBuenasPrácticas
